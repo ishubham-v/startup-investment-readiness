@@ -1,35 +1,31 @@
-# startup-investment-readiness
-Startup investment readiness scoring with SBERT novelty &amp; sentiment, via RBF-SVM
-Machine Learning–Driven Startup Investment Readiness Scoring
-Overcoming Subjectivity Bias with Novelty & Sentiment-Enhanced Feature Modelling (Jan 2025 – May 2025)
+# Data for ML-Investment-Readiness
 
-This project implements an end-to-end machine learning pipeline to assess startup investment readiness, integrating:
+This folder contains the datasets used in the **Machine Learning–Driven Startup Investment Readiness** project.
 
-**Financial features**: 
-Funding, burn rate, runway, revenue growth, margins, LTV/CAC, ARR, churn rate.
+## Files
+- **synthetic_startups.csv** — Synthetic benchmark dataset with 15 engineered features + label for readiness.
+- **sdg_labels.json** — Mapping of UN Sustainable Development Goals (SDGs) to be used in the `Sustainability_Alignment` feature.
 
-**Strategic features:**
+## Schema
+| Column                     | Type   | Description |
+|----------------------------|--------|-------------|
+| Total_Funding_USD_M        | float  | Total funding in millions USD |
+| Burn_Rate_USD_M            | float  | Monthly burn rate in millions USD |
+| Runway_Months              | float  | Operational runway in months |
+| Revenue_USD_M              | float  | Annual revenue in millions USD |
+| Revenue_Growth_Rate        | float  | Year-on-year revenue growth rate |
+| Net_Profit_Margin          | float  | Net profit margin |
+| CAC                        | float  | Customer acquisition cost |
+| LTV                        | float  | Customer lifetime value |
+| LTV_CAC_Ratio              | float  | Ratio of LTV to CAC |
+| ARR_USD_M                  | float  | Annual recurring revenue in millions USD |
+| Churn_Rate                 | float  | Monthly churn rate |
+| Novelty_Score              | float  | SBERT-based novelty score |
+| Sustainability_Alignment   | int    | 1 if aligned with SDGs, else 0 |
+| Sentiment_Score            | float  | FinBERT sentiment score |
+| Social_Buzz_Score          | float  | Normalized measure of online buzz |
+| label                      | int    | 1 = investment ready, 0 = not ready |
 
-Idea Novelty via SBERT embeddings and cosine similarity against market vectors.
-
-Sustainability Alignment with UN SDGs.
-
-**Perceptual features:**
-
-FinBERT-based sentiment analysis of news coverage.
-
-Social buzz scores from online presence metrics.
-
-A Support Vector Machine (RBF kernel) is trained on these 15 engineered features, with VC-risk-aligned sigmoid thresholding to optimize both F1-score and decision quality.
-
- **Highlights**
--SBERT-powered novelty modelling to measure originality in startup concepts.
-
--FinBERT sentiment scoring to quantify market and media perception.
-
--Synthetic dataset benchmark achieving ~80% accuracy and 0.77 F1-score.
-
--Bias mitigation by shifting from purely subjective evaluation to feature-driven modelling.
-
--Modular feature engineering pipeline — drop in real data to replace synthetic baseline.
-
+## Notes
+- This synthetic dataset is generated for benchmarking (~80% accuracy, F1 ~0.77) and **does not** represent real startups.
+- Replace with real data in the same schema for production use.
