@@ -5,15 +5,16 @@ Overcoming Subjectivity Bias with Novelty & Sentiment-Enhanced Feature Modelling
 
 This project implements an end-to-end machine learning pipeline to assess startup investment readiness, integrating:
 
-Financial features: Funding, burn rate, runway, revenue growth, margins, LTV/CAC, ARR, churn rate.
+**Financial features**: 
+Funding, burn rate, runway, revenue growth, margins, LTV/CAC, ARR, churn rate.
 
-Strategic features:
+**Strategic features:**
 
 Idea Novelty via SBERT embeddings and cosine similarity against market vectors.
 
 Sustainability Alignment with UN SDGs.
 
-Perceptual features:
+**Perceptual features:**
 
 FinBERT-based sentiment analysis of news coverage.
 
@@ -21,7 +22,7 @@ Social buzz scores from online presence metrics.
 
 A Support Vector Machine (RBF kernel) is trained on these 15 engineered features, with VC-risk-aligned sigmoid thresholding to optimize both F1-score and decision quality.
 
-✨ Highlights
+ **Highlights**
 -SBERT-powered novelty modelling to measure originality in startup concepts.
 
 -FinBERT sentiment scoring to quantify market and media perception.
