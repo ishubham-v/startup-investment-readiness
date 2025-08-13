@@ -22,13 +22,13 @@ Social buzz scores from online presence metrics.
 A Support Vector Machine (RBF kernel) is trained on these 15 engineered features, with VC-risk-aligned sigmoid thresholding to optimize both F1-score and decision quality.
 
 ✨ Highlights
-SBERT-powered novelty modelling to measure originality in startup concepts.
+-SBERT-powered novelty modelling to measure originality in startup concepts.
 
-FinBERT sentiment scoring to quantify market and media perception.
+-FinBERT sentiment scoring to quantify market and media perception.
 
-Synthetic dataset benchmark achieving ~80% accuracy and 0.77 F1-score.
+-Synthetic dataset benchmark achieving ~80% accuracy and 0.77 F1-score.
 
-Bias mitigation by shifting from purely subjective evaluation to feature-driven modelling.
+-Bias mitigation by shifting from purely subjective evaluation to feature-driven modelling.
 
-Modular feature engineering pipeline — drop in real data to replace synthetic baseline.
+-Modular feature engineering pipeline — drop in real data to replace synthetic baseline.
 
